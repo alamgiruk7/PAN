@@ -83,12 +83,10 @@ class News:
 
         if datetime:
             match_query["articlePubDate"] = {"$gte": datetime}
-        if sources or genres:
-            match_query["$or"] = []
         if sources:
-            match_query["$or"].append({"source": {"$in": sources}})
+            match_query["source"] = {"$in": sources}
         if genres:
-            match_query["$or"].append({"genre": {"$in": genres}})
+            match_query["genre"] = {"$in": genres}
         pipeline.append({"$match": match_query})
 
         # group = [
