@@ -1,0 +1,12 @@
+{
+    "Endpoint": "/get_news",
+    "method": "Get",
+    "Payload": {
+        "json": {
+            "sources": ["...", "..."],
+            "genres": ["...", "..."],
+            "datetime": "ISOFORMAT(datetime)",
+            "search_query": "..."
+        }
+    }
+}
